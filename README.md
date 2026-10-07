@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClassifAI Portfolio
 
-## Getting Started
+Research project portfolio built with Next.js and configured for free hosting on
+GitHub Pages.
 
-First, run the development server:
+## Run locally
+
+From the project directory, install dependencies and start the development
+server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The development server
+reloads as you edit files in `app/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Add project materials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The one-page portfolio content and editable media/team placeholders are in
+`app/page.tsx`.
 
-## Learn More
+- **Demo video:** put an MP4 at `public/demo-video.mp4` and set
+  `demoVideoSrc` to `"/demo-video.mp4"`.
+- **Research poster:** the PDF in `public/research-poster.pdf` is linked for
+  opening or downloading. The in-page preview uses
+  `public/research-poster-preview.png` so it displays without the browser PDF
+  viewer's gray frame. If you replace the PDF, regenerate the preview image too.
+- **Researchers:** replace the entries in the `researchers` list with names,
+  roles, and affiliations.
+- **Findings:** replace the clearly marked prompts with verified results when
+  they are ready to share.
+- **Contact:** set `contactEmail` to the project email address.
 
-To learn more about Next.js, take a look at the following resources:
+To create a production-ready static site locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The generated static site is written to `out/`.
 
-## Deploy on Vercel
+## Publish on GitHub Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The GitHub Actions workflow builds this project as a static export and deploys
+it to GitHub Pages. In the repository's **Settings → Pages**, set **Build and
+deployment → Source** to **GitHub Actions**. Push to `main` (or manually run
+the **Deploy to GitHub Pages** workflow from the Actions tab) to publish.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The deployed project site will be available at
+<https://oscarv06-cs.github.io/ClassifAI-Portfolio/>. The workflow applies the
+repository's base path during its build; local development stays at
+`http://localhost:3000`.
+
+GitHub Pages serves static files only. Features that require a Next.js server,
+such as API routes or server-side rendering at request time, cannot be used in
+this deployment.
