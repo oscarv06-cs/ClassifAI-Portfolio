@@ -44,11 +44,10 @@ export default function Home() {
         <section className="hero">
           <div className="hero-copy">
             <p className="eyebrow">A RESEARCH PROJECT ON AI CLASSIFICATION</p>
-            <h1>Making AI classification easier to understand.</h1>
+            <h1>Making Screen time classification less ambiguous using lightweight AI models</h1>
             <p>
-              ClassifAI explores how people experience AI-powered
-              classification and how these systems can be made more
-              transparent and human-centered.
+              ClassifAI allows users to understand their screen time habits
+              while having transparent and safety-first privacy.
             </p>
             <a className="button" href="#demo">Watch the demo</a>
           </div>
@@ -111,13 +110,21 @@ export default function Home() {
           </div>
           <div className="section-copy">
             <p>
-              AI classification can help organize complex information, but
-              categories don’t always capture the full context. ClassifAI
-              studies how people understand these systems and their results.
+              Our application determines how long a user spends on
+              entertainment versus work. Screenshots pass through Model A,
+              which classifies activity with 93% accuracy. If Model A
+              identifies inactivity, the result is recorded. If it identifies
+              active content, that information goes to Model B, which
+              classifies the activity as work or entertainment with 86%
+              accuracy. Once Model B finishes, the results are updated and all
+              screenshots are deleted.
             </p>
             <p>
-              Our goal is to explore ways to make classifications clearer,
+              The models run on-device, and no information is saved externally
+              or locally. Our goal is to make classifications clearer,
               communicate uncertainty, and help people make informed decisions.
+              ClassifAI was created to help users become more aware of how they
+              spend their screen time.
             </p>
           </div>
         </section>
@@ -218,10 +225,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="edit-note">
-            Update the <code>researchers</code> list in <code>app/page.tsx</code>{" "}
-            with names and affiliations.
-          </p>
         </section>
 
         <section className="contact-section" id="contact">
