@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-const demoVideoSrc = "";
+const basePath = process.env.GITHUB_PAGES_BASE_PATH ?? "";
+const demoVideoSrc = `${basePath}/demo-video.mp4`;
 const researchPosterHref = "research-poster.pdf";
 const researchPosterPreviewSrc = "research-poster-preview.png";
 const contactEmail = "oscarvaleriano@ucsb.edu";
-const basePath = process.env.GITHUB_PAGES_BASE_PATH ?? "";
 
 const researchers = [
   {
@@ -133,7 +133,7 @@ export default function Home() {
           <div className="section-title">
             <p className="eyebrow">SEE THE PROJECT</p>
             <h2>Demo</h2>
-            <p>A short walkthrough of the project or prototype.</p>
+            <p>A short walkthrough of ClassifAI.</p>
           </div>
           <div className="video-frame">
             {demoVideoSrc ? (
@@ -148,10 +148,6 @@ export default function Home() {
               </div>
             )}
           </div>
-          <p className="edit-note">
-            Add <code>public/demo-video.mp4</code> and set{" "}
-            <code>demoVideoSrc</code> in <code>app/page.tsx</code>.
-          </p>
         </section>
 
         <section className="content-section poster-section" id="poster">
