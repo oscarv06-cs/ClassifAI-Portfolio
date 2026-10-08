@@ -4,6 +4,7 @@ const demoVideoSrc = "";
 const researchPosterHref = "research-poster.pdf";
 const researchPosterPreviewSrc = "research-poster-preview.png";
 const contactEmail = "oscarvaleriano@ucsb.edu";
+const basePath = process.env.GITHUB_PAGES_BASE_PATH ?? "";
 
 const researchers = [
   {
@@ -15,7 +16,7 @@ const researchers = [
   {
     name: "Oscar Valeriano",
     role: "Undergraduate Student Researcher at the University of California, Santa Barbara",
-    photo: "/oscar_valeriano.jpeg",
+    photo: `${basePath}/oscar_valeriano.jpeg`,
     linkedIn: "https://www.linkedin.com/in/ovlr/",
   },
   {
