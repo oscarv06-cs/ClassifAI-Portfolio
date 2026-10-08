@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 const basePath = process.env.GITHUB_PAGES_BASE_PATH ?? "";
-const demoVideoSrc = `${basePath}/demo-video.mp4`;
 const researchPosterHref = "research-poster.pdf";
 const researchPosterPreviewSrc = "research-poster-preview.png";
 const contactEmail = "oscarvaleriano@ucsb.edu";
@@ -136,17 +135,13 @@ export default function Home() {
             <p>A short walkthrough of ClassifAI.</p>
           </div>
           <div className="video-frame">
-            {demoVideoSrc ? (
-              <video controls preload="metadata" playsInline>
-                <source src={demoVideoSrc} type="video/mp4" />
-                Your browser does not support the video element.
-              </video>
-            ) : (
-              <div className="video-placeholder">
-                <span className="play-icon" aria-hidden="true">▶</span>
-                <p>Demo video placeholder</p>
-              </div>
-            )}
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/MPrzq3ZFkpU"
+              title="ClassifAI demo video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
           </div>
         </section>
 
