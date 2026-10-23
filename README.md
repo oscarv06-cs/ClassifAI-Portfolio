@@ -1,8 +1,7 @@
 # ClassifAI Portfolio
 
 Research project portfolio built with Next.js and configured for free hosting on
-GitHub Pages.
-
+GitHub Pages. Click here for the website view! <https://oscarv06-cs.github.io/ClassifAI-Portfolio/>
 ## Run locally
 
 From the project directory, install dependencies and start the development
